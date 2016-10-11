@@ -1,0 +1,18 @@
+#!/bin/bash
+
+appslist=(
+	"AMG|br.com.sportv.AmericaMG|AmericaMG"
+	"GRE|br.com.sportv.Gremio|Gremio"
+	"FLU|br.com.sportv.Fluminense|Fluminense"
+)
+
+for row in ${appslist[@]}; do 
+	IFS='|' read -a columns <<< "${row}"
+
+	initials=${columns[0]}
+	bundle_id=${columns[1]}
+	name=${columns[2]}
+
+	printf "\n$initials - $bundle_id - $name"
+
+done
