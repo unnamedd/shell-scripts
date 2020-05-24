@@ -92,7 +92,7 @@ function download() {
 
 function main() {
     local pages=(258 273 287)
-    local folder="/Users/unnamedd/Downloads/ipeak"
+    local folder="/Users/yourusername/foldername"
 
     download $folder "--pages" "${pages[@]}"
     #download $folder "--numberOfPages" 294
